@@ -7,3 +7,4 @@ proposal/*
 !proposal/images
 !proposal/**.tex
 !proposal/**.bib
+!proposal/proposal-template.cls
