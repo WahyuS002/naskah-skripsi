@@ -1,0 +1,9 @@
+.git
+
+.DS_STORE
+proposal/*
+
+# Exception
+!proposal/images
+!proposal/**.tex
+!proposal/**.bib

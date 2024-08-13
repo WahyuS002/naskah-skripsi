@@ -1,0 +1,68 @@
+\chapter{PENDAHULUAN}
+
+\section{Latar Belakang}
+Sesuai dengan ketentuan yang tercantum dalam Undang-Undang Nomor 12 Tahun 2012, tepatnya pada Bab 1 Pasal 1 Ayat 9, setiap institusi perguruan tinggi memiliki kewajiban untuk melaksanakan Tri Dharma Perguruan Tinggi. Kewajiban ini mencakup tiga aspek utama, yaitu penyelenggaraan pendidikan, pelaksanaan kegiatan penelitian, serta pelaksanaan program pengabdian kepada masyarakat. Dalam melakukan penelitian, perguruan tinggi diharapkan dapat menghasilkan karya-karya ilmiah yang inovatif dan bermanfaat bagi kemajuan ilmu pengetahuan \cite{bourner2020contribution}.
+
+Di beberapa perguruan tinggi negeri maupun swasta skripsi merupakan salah satu bentuk karya ilmiah yang harus dihasilkan oleh mahasiswa. Oleh karena itu mahasiswa harus memilih topik skripsi yang penting bagi mereka. Namun, banyak dari mahasiswa menghadapi tantangan dalam memilih topik skripsi, termasuk kurangnya pengetahuan, ketidakkooperatifan instruktur, stres, dan ketakutan untuk bertanya atau meminta saran dari dosen \cite{khan2023challenges}. Hal ini akan berdampak pula terhadap kualitas penelitian mahasiswa. Pandemi COVID-19 telah memaksa institusi pendidikan beralih ke pembelajaran jarak jauh secara mendadak \cite{yemelyanova2023educational}. Transisi ini mempengaruhi proses belajar mengajar dan kemampuan mahasiswa dalam melakukan penelitian dan menulis skripsi. Adaptasi terhadap metode dan platform digital baru dapat menambah kesulitan dalam pemilihan dan pengembangan topik skripsi. 
+
+Untuk mengatasi tantangan yang dihadapi oleh mahasiswa dalam pemilihan topik dan pengerjaan skripsi, berbagai upaya telah dilakukan oleh institusi pendidikan tinggi. Salah satu upaya yang dilakukan adalah dengan menyediakan panduan dan strategi dalam memilih topik penelitian \cite{nirmala2020strategi}. Proses pemilihan topik dapat dibagi menjadi empat tahap utama: "tahap menemukan masalah, menentukan ruang lingkup masalah, menemukan cabang ilmu yang menaungi masalah, dan tahap merumuskan judul." Pendekatan sistematis ini dapat membantu mahasiswa, terutama pemula, dalam mengidentifikasi dan mengembangkan topik penelitian yang relevan. 
+
+Berbagai pendekatan dan metode telah dikembangkan untuk membantu mahasiswa dalam proses pemilihan topik skripsi, dengan fokus pada pemanfaatan teknologi informasi dan teknik-teknik komputasi untuk menghasilkan rekomendasi yang lebih efektif dan akurat.\cite{merawati2018sistem} mengembangkan sistem rekomendasi topik skripsi menggunakan metode Case Based Reasoning (CBR) dengan perhitungan similaritas menggunakan Manhattan distance. \cite{abdullah2021sistem} menerapkan metode Fuzzy Analytical Hierarchy Process (F-AHP) untuk sistem pendukung keputusan rekomendasi topik skripsi. \cite{patria2022optimasi} mengoptimasi Support Vector Machine (SVM) menggunakan K-Means dan K-Medoids untuk klasterisasi tema tugas akhir. \cite{salam2022sistem} mengembangkan sistem rekomendasi tugas akhir mahasiswa menggunakan metode Collaborative Filtering (CF) untuk mendukung program Merdeka Belajar-Kampus Merdeka.
+
+Dalam perkembangan terbaru, machine learning telah muncul sebagai pendekatan yang menjanjikan dalam meningkatkan akurasi dan efektivitas sistem rekomendasi topik skripsi. Khususnya, model hybrid yang menggabungkan berbagai teknik machine learning telah menunjukkan potensi yang signifikan dalam mengatasi keterbatasan pendekatan tradisional.
+
+\cite{Ko2022} dalam penelitiannya "A Survey of Recommendation Systems: Recommendation Models, Techniques, and Application Fields" menyoroti keunggulan model hybrid dalam sistem rekomendasi. Mereka mencatat bahwa model hybrid dapat mengatasi kelemahan masing-masing komponen individual dengan menggabungkan kekuatan dari berbagai teknik. Misalnya, penggabungan Content-Based Filtering dan Collaborative Filtering dalam model hybrid memungkinkan sistem untuk memanfaatkan informasi konten serta pola perilaku pengguna, menghasilkan rekomendasi yang lebih akurat dan personal.
+
+Dalam konteks rekomendasi topik skripsi, pendekatan hybrid juga menunjukkan potensi yang signifikan. \cite{walek2020hybrid} dalam penelitian mereka "A hybrid recommender system for recommending relevant movies using an expert system" mendemonstrasikan efektivitas pendekatan hybrid dalam domain rekomendasi film. Mereka mengintegrasikan sistem collaborative filtering, content-based filtering, dan sistem pakar fuzzy untuk menghasilkan rekomendasi yang lebih akurat dan personal. Meskipun penelitian ini berfokus pada rekomendasi film, prinsip-prinsip yang digunakan dapat diadaptasi untuk domain lain, termasuk rekomendasi topik skripsi.
+
+Namun, meskipun pendekatan hybrid telah terbukti efektif dalam berbagai domain, penerapannya dalam konteks rekomendasi topik skripsi masih relatif terbatas. Sebagian besar penelitian yang ada tentang rekomendasi topik skripsi cenderung menggunakan pendekatan tunggal seperti content-based filtering atau collaborative filtering. Oleh karena itu penelitian ini mengusulkan judul "Pengembangan Sistem Rekomendasi  untuk Pemilihan Topik Skripsi dengan Pendekatan Hybrid Machine Learning".  Proposal ini bertujuan untuk mengembangkan sistem yang dapat secara efektif memadukan kekuatan dari berbagai metode machine learning, sehingga dapat menghasilkan rekomendasi topik skripsi yang lebih akurat, relevan, dan sesuai dengan kebutuhan individual mahasiswa serta. 
+
+\section{Rumusan Masalah}
+    \begin{enumerate}
+        \item Bagaimana mengembangkan sistem rekomendasi untuk pemilihan topik skripsi dengan pendekatan hybrid machine learning yang dapat menghasilkan rekomendasi yang lebih akurat dan relevan?
+        \item Bagaimana mengintegrasikan berbagai metode machine learning, seperti content-based filtering dan collaborative filtering, dalam satu sistem rekomendasi topik skripsi?
+        \item Sejauh mana pendekatan hybrid machine learning dapat meningkatkan akurasi dan relevansi rekomendasi topik skripsi dibandingkan dengan pendekatan tunggal?
+    \end{enumerate}
+
+\section{Batasan Masalah}
+    \begin{enumerate}
+        \item Penelitian ini berfokus pada pengembangan sistem rekomendasi topik skripsi untuk mahasiswa tingkat sarjana.
+        \item Sistem rekomendasi yang dikembangkan akan menggunakan pendekatan hybrid machine learning, menggabungkan metode content-based filtering dan collaborative filtering.
+        \item Data yang digunakan dalam penelitian ini terbatas pada data historis topik skripsi, profil mahasiswa, dan preferensi yang tersedia di institusi perguruan tinggi tertentu.
+        \item Evaluasi sistem akan dilakukan menggunakan metrik standar untuk sistem rekomendasi, seperti presisi, recall, dan F1-score.
+    \end{enumerate}
+
+\section{Tujuan Penelitian}
+    \begin{enumerate}
+        \item Mengembangkan sistem rekomendasi topik skripsi menggunakan pendekatan hybrid machine learning yang menggabungkan content-based filtering dan collaborative filtering.
+        \item Menganalisis efektivitas pendekatan hybrid machine learning dalam meningkatkan akurasi dan relevansi rekomendasi topik skripsi.
+        \item Membandingkan kinerja sistem rekomendasi hybrid dengan pendekatan tunggal dalam konteks pemilihan topik skripsi.
+        \item Mengidentifikasi faktor-faktor yang mempengaruhi efektivitas sistem rekomendasi topik skripsi berbasis hybrid machine learning.
+    \end{enumerate}
+
+\section{Manfaat Penelitian}
+    \begin{enumerate}
+        \item Membantu mahasiswa dalam memilih topik skripsi yang sesuai dengan minat, kemampuan, dan tren penelitian terkini, sehingga dapat meningkatkan kualitas penelitian.
+        \item Meningkatkan efisiensi proses bimbingan skripsi dan berpotensi meningkatkan kualitas penelitian mahasiswa.
+        \item Memperluas pemahaman tentang penerapan pendekatan hybrid machine learning dalam sistem rekomendasi, yang dapat bermanfaat bagi pengembangan sistem serupa di bidang lain.
+    \end{enumerate}
+
+\section{Sistematika Penulisan}
+Sistematika penulisan laporan penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item \textbf{Bab I Pendahuluan} \\ 
+    Berisi latar belakang, rumusan masalah, batasan masalah, tujuan penelitian, manfaat penelitian, dan sistematika penulisan.
+    \item \textbf{Bab II Tinjauan Pustaka} \\ 
+    Berisi penjelasan mengenai teori-teori yang digunakan dalam penelitian ini.
+    \item \textbf{Bab III Metode Penelitian} \\ 
+    Berisi penjelasan mengenai metode penelitian yang digunakan dalam penelitian ini.
+    \item \textbf{Bab IV Analisa dan Perancangan} \\ 
+    Berisi penjelasan mengenai analisa dan perancangan yang digunakan dalam penelitian ini.
+    \item \textbf{Bab V Hasil dan Pembahasan} \\ 
+    Berisi penjelasan mengenai hasil dan pembahasan yang digunakan dalam penelitian ini.
+    \item \textbf{Bab VI Kesimpulan dan Saran} \\ 
+    Berisi penjelasan mengenai kesimpulan dan saran yang digunakan dalam penelitian ini.
+\end{enumerate}
+
+
