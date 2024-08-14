@@ -14,6 +14,10 @@
 % Required packages
 \RequirePackage{setspace}
 \RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage[table]{xcolor}
+\RequirePackage{array}
+\RequirePackage{multirow}
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
