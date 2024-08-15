@@ -18,6 +18,9 @@
 \RequirePackage[table]{xcolor}
 \RequirePackage{array}
 \RequirePackage{multirow}
+\RequirePackage{indentfirst}
+\RequirePackage{apacite}
+\RequirePackage[top=3cm, right=3cm, bottom=3cm, left=4cm]{geometry} % Set margins to 4-3-3-3
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
@@ -28,13 +31,67 @@
 \newcommand{\university}[1]{\def\@university{#1}}
 \newcommand{\yearsubmit}[1]{\def\@yearsubmit{#1}}
 
+\newcommand{\startpagenumbering}{%
+  \clearpage
+  \pagenumbering{arabic}%
+  \setcounter{page}{1}%
+}
+
+\@afterindenttrue %Indent the 1st paragraph
+
 %------------------------------------------------------------
-%Define cover in Indonesian
+% Redefine caption names
+%------------------------------------------------------------
+\renewcommand{\chaptername}{BAB}
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\tablename}{Tabel}
+
+% Redefine chapter
+\renewcommand{\@makechapterhead}[1]{%
+  {\parindent \z@ \centering \normalfont
+  \ifnum \c@secnumdepth >\m@ne
+  \normalsize\bfseries \@chapapp\space \thechapter
+  \par\nobreak
+  \vskip -5\p@
+  \fi
+  \interlinepenalty\@M
+  \normalsize \bfseries #1\par\nobreak
+  \vskip 10\p@
+}}
+
+% Redefine Section with reduced space after
+\renewcommand{\section}{
+  \@startsection {section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}% Space before (unchanged)
+  {0.1ex \@plus.2ex}% Reduced space after (was 2.3ex)
+  {\normalfont\normalsize\bfseries}
+}
+
+% Redefine subsection
+\renewcommand{\subsection}{
+  \@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {0.1ex \@plus.2ex}% Reduced space after (was 2.3ex)
+  {\normalfont\normalsize\bfseries}
+}
+
+% Redefine subsubsection
+\renewcommand{\subsubsection}{
+  \@startsection{subsubsection}{3}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {1em}%
+  {\normalfont\normalsize\bfseries}
+}
+
+\setlength{\parindent}{3em} % Set indentation
+\setlength{\parskip}{1em} % Space between paragraph
+
+%------------------------------------------------------------
+% Define cover in Indonesian
 %------------------------------------------------------------
 \newcommand{\cover}{%
+\setcounter{page}{0}%
 \thispagestyle{empty}%
-\pagenumbering{roman}
-\setcounter{page}{1}
 \begin{center}
   \begin{singlespace}
     \MakeUppercase{\normalfont\bfseries Skripsi}\\
@@ -60,3 +117,4 @@
 \end{center}
 }
 
+\startpagenumbering  % Start numbering from 1 in Arabic
