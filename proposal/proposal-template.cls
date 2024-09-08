@@ -21,6 +21,8 @@
 \RequirePackage{indentfirst}
 \RequirePackage{apacite}
 \RequirePackage[top=3cm, right=3cm, bottom=3cm, left=4cm]{geometry} % Set margins to 4-3-3-3
+\RequirePackage[indonesian]{babel}
+\RequirePackage{url}
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
@@ -38,6 +40,13 @@
 }
 
 \@afterindenttrue %Indent the 1st paragraph
+
+%------------------------------------------------------------
+% Redefine bibliography name
+%------------------------------------------------------------
+\addto\captionsindonesian{
+  \renewcommand{\bibname}{Daftar Pustaka}
+}
 
 %------------------------------------------------------------
 % Redefine caption names
