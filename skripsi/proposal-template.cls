@@ -23,7 +23,6 @@
 \RequirePackage[top=3cm, right=3cm, bottom=3cm, left=4cm]{geometry} % Set margins to 4-3-3-3
 \RequirePackage[indonesian]{babel}
 \RequirePackage{url}
-\RequirePackage{titlesec}
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
@@ -48,15 +47,6 @@
 \addto\captionsindonesian{
   \renewcommand{\bibname}{Daftar Pustaka}
 }
-
-%------------------------------------------------------------
-% Redefine section numbering
-%------------------------------------------------------------
-\titleformat{\section}
-  {\normalfont\normalsize\bfseries}{\thesection}{1em}{}
-\titlespacing*{\section}
-  {0pt}{3.5ex plus 1ex minus .2ex}{0.1ex plus .2ex}
-\renewcommand{\thesection}{\arabic{section}}
 
 %------------------------------------------------------------
 % Redefine caption names
@@ -113,7 +103,7 @@
 \thispagestyle{empty}%
 \begin{center}
   \begin{singlespace}
-    \MakeUppercase{\normalfont\bfseries Proposal Skripsi}\\
+    \MakeUppercase{\normalfont\bfseries Skripsi}\\
     \vspace{1.5cm}
     {\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak}
     \vspace{1.0cm}
