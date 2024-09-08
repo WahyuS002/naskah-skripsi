@@ -1,18 +1,10 @@
 \chapter{METODE PENELITIAN}
 
 \section{Jenis Penelitian}
-Penelitian ini mengadopsi pendekatan penelitian terapan, dengan fokus utama pada implementasi teknologi Jaringan Syaraf Tiruan dalam pengembangan sistem prediksi lama studi mahasiswa. Melalui pendekatan ini, penelitian bertujuan untuk mengaplikasikan dan mengevaluasi efektivitas metode Jaringan Syaraf Tiruan dalam konteks spesifik sistem perdiksi lama studi mahasiswa. Alur metode ini dapat dilihat pada Gambar \ref{fig:crisp-dm-overview}
-
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[width=0.55\textwidth]{images/crisp-dm-overview.jpg}}
-    \caption{Alur Metode CRISP-DM \cite{IBM2022}}
-    \label{fig:crisp-dm-overview}
-\end{figure}
+Penelitian ini mengadopsi pendekatan penelitian terapan, dengan fokus utama pada implementasi teknologi Jaringan Syaraf Tiruan dalam pengembangan sistem prediksi lama studi mahasiswa. Melalui pendekatan ini, penelitian bertujuan untuk mengaplikasikan dan mengevaluasi efektivitas metode Jaringan Syaraf Tiruan dalam konteks spesifik sistem perdiksi lama studi mahasiswa.
 
 \section{Waktu dan Tempat Penelitian}
-% TODO: Sesuaikan detail spesifik
-Penelitian ini dilaksanakan dalam rentang waktu empat bulan, dimulai dari Agustus 2024 hingga November 2024. Pengumpulan data dilakukan melalui akuisisi dataset dari Program Studi ..., yang menyediakan basis data komprehensif mengenai data-data mahasiswa yang akan digunakan untuk membuat prediksi lama studi.
+Penelitian ini dilaksanakan dalam rentang waktu empat bulan, dimulai dari Agustus 2024 hingga November 2024. Pengumpulan data dilakukan melalui akuisisi dataset dari Program Studi Sistem Informasi dan Informatika yang menyediakan basis data komprehensif mengenai data-data mahasiswa yang akan digunakan untuk membuat prediksi lama studi.
 
 \section{Sarana dan Pendukung}
 Untuk memastikan keberhasilan dan efisiensi penelitian ini, berbagai sarana pendukung telah diidentifikasi dan disiapkan. Perangkat keras dan perangkat lunak yang dipilih tidak hanya mendukung pelaksanaan penelitian, tetapi juga memungkinkan pengembangan dan pengujian sistem prediksi secara optimal. Berikut adalah rincian perangkat yang digunakan:
@@ -34,28 +26,36 @@ Untuk memastikan keberhasilan dan efisiensi penelitian ini, berbagai sarana pend
 \end{enumerate}
 
 \section{Rancangan Penelitian}
-Rancangan penelitian ini disusun secara sistematis untuk memastikan pelaksanaan yang terstruktur dan efektif. Dengan mengadopsi metodologi Cross-Industry Standard Process for Data Mining (CRISP-DM), penelitian ini dibagi menjadi beberapa tahapan kritis yang saling terkait. Setiap tahapan dirancang untuk membangun fondasi bagi tahapan berikutnya, memastikan kesinambungan dalam proses penelitian. Berikut adalah uraian detail dari setiap tahapan:
+Rancangan penelitian ini disusun secara sistematis untuk memastikan pelaksanaan yang terstruktur dan efektif. Dengan mengadopsi metodologi \textit{Cross-Industry Standard Process for Data Mining} (CRISP-DM), penelitian ini dibagi menjadi beberapa tahapan kritis yang saling terkait. Setiap tahapan dirancang untuk membangun fondasi bagi tahapan berikutnya, memastikan kesinambungan dalam proses penelitian. Alur metode ini dapat dilihat pada Gambar \ref{fig:crisp-dm-overview}.
 
-\subsection{Business Understanding}
-Tahap ini berfokus pada pemahaman mendalam tentang kebutuhan dan tantangan dalam memprediksi lama studi mahasiswa di institusi pendidikan tinggi. Melalui wawancara dengan stakeholder akademik seperti dosen pembimbing. Tujuan spesifik dari sistem prediksi yang akan dikembangkan menggunakan Jaringan Syaraf Tiruan akan didefinisikan dengan jelas. Pemahaman ini akan menjadi landasan untuk merancang solusi prediksi yang akurat, tepat sasaran, dan bernilai tinggi bagi institusi dalam upaya meningkatkan tingkat kelulusan tepat waktu dan mengurangi angka putus kuliah.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.55\textwidth]{images/crisp-dm-overview.jpg}}
+    \caption{Alur Metode CRISP-DM \cite{IBM2022}}
+    \label{fig:crisp-dm-overview}
+\end{figure}
 
-\subsection{Data Understanding}
-Pada tahap ini, peneliti akan melakukan eksplorasi mendalam terhadap dataset akademik mahasiswa yang tersedia. Aktivitas ini mencakup analisis statistik deskriptif, visualisasi data, dan identifikasi pola yang mungkin mempengaruhi lama studi mahasiswa. Dataset yang akan dieksplorasi meliputi data akademik seperti IPK per semester, nilai mata kuliah, data demografis mahasiswa. Pemahaman yang baik tentang karakteristik data, termasuk kualitas, kelengkapan, dan relevansinya terhadap prediksi lama studi, akan membantu dalam merancang strategi preprocessing yang efektif dan pemilihan fitur yang tepat untuk model Jaringan Syaraf Tiruan. Analisis korelasi antar variabel juga akan dilakukan untuk mengidentifikasi faktor-faktor yang memiliki pengaruh signifikan terhadap lama studi mahasiswa.
+Gambar \ref{fig:crisp-dm-overview} mengilustrasikan alur metode CRISP-DM yang diterapkan dalam pengembangan Sistem Prediksi Lama Studi Mahasiswa menggunakan Metode Jaringan Syaraf Tiruan. Berikut adalah penjelasan setiap tahap dalam konteks penelitian ini:
 
-\subsection{Data Preparation}
-Tahap persiapan data melibatkan serangkaian proses untuk mengolah data akademik mahasiswa menjadi format yang siap digunakan dalam pemodelan Jaringan Syaraf Tiruan. Kegiatan ini mencakup pembersihan data untuk mengatasi nilai yang hilang atau tidak konsisten pada record akademik, normalisasi atau standarisasi fitur numerik seperti IPK dan nilai mata kuliah, encoding variabel kategorikal seperti jurusan atau status mahasiswa, dan potentially feature engineering untuk menciptakan fitur baru yang lebih informatif, misalnya rata-rata nilai mata kuliah inti. Selain itu, dataset akan dibagi menjadi set pelatihan dan pengujian untuk memfasilitasi evaluasi model prediksi lama studi yang akurat.
+\subsection{\textit{Business Understanding}}
+Tahap ini berfokus pada pemahaman mendalam tentang kebutuhan dan tantangan dalam memprediksi lama studi mahasiswa di institusi pendidikan tinggi. Melalui wawancara dengan \textit{stakeholder} akademik seperti dosen pembimbing, tujuan spesifik dari sistem prediksi yang akan dikembangkan menggunakan Jaringan Syaraf Tiruan akan didefinisikan dengan jelas. Pemahaman ini akan menjadi landasan untuk merancang solusi prediksi yang akurat, tepat sasaran, dan bernilai tinggi bagi institusi dalam upaya meningkatkan tingkat kelulusan tepat waktu dan mengurangi angka putus kuliah.
 
-\subsection{Modeling}
-Dalam tahap pemodelan, peneliti akan mengimplementasikan metode Jaringan Syaraf Tiruan dengan algoritma backpropagation untuk memprediksi lama studi mahasiswa. Proses ini melibatkan eksperimen dengan berbagai arsitektur jaringan, penentuan jumlah layer dan neuron yang optimal, serta tuning hyperparameter seperti learning rate dan momentum. Validasi silang akan digunakan untuk mengoptimalkan performa model. Fokus utama adalah pada pengembangan model JST yang dapat menangkap kompleksitas hubungan antara berbagai faktor akademik dan non-akademik yang mempengaruhi lama studi mahasiswa.
+\subsection{\textit{Data Understanding}}
+Pada tahap ini, dilakukan eksplorasi mendalam terhadap dataset akademik mahasiswa yang tersedia. Aktivitas ini mencakup analisis statistik deskriptif, visualisasi data, dan identifikasi pola yang mungkin mempengaruhi lama studi mahasiswa. Dataset yang akan dieksplorasi meliputi data akademik seperti IPK per semester, nilai mata kuliah, dan data demografis mahasiswa. Pemahaman yang baik tentang karakteristik data, termasuk kualitas, kelengkapan, dan relevansinya terhadap prediksi lama studi, akan membantu dalam merancang strategi \textit{preprocessing} yang efektif dan pemilihan fitur yang tepat untuk model Jaringan Syaraf Tiruan. Analisis korelasi antar variabel juga akan dilakukan untuk mengidentifikasi faktor-faktor yang memiliki pengaruh signifikan terhadap lama studi mahasiswa.
 
-\subsection{Evaluation}
-Evaluasi model JST akan dilakukan secara komprehensif menggunakan berbagai metrik kinerja seperti Mean Absolute Error (MAE), Root Mean Square Error (RMSE), dan koefisien determinasi (R²) untuk mengukur akurasi prediksi lama studi. Selain itu, analisis sensitivitas akan dilakukan untuk memahami pengaruh relatif dari berbagai input terhadap prediksi. Proses evaluasi ini juga akan mencakup perbandingan dengan metode machine learning lainnya seperti regresi linear dan decision tree untuk mengukur keunggulan pendekatan JST dalam konteks prediksi lama studi mahasiswa.
+\subsection{\textit{Data Preparation}}
+Tahap persiapan data melibatkan serangkaian proses untuk mengolah data akademik mahasiswa menjadi format yang siap digunakan dalam pemodelan Jaringan Syaraf Tiruan. Kegiatan ini mencakup pembersihan data untuk mengatasi nilai yang hilang atau tidak konsisten pada \textit{record} akademik, normalisasi atau standarisasi fitur numerik seperti IPK dan nilai mata kuliah, \textit{encoding} variabel kategorikal seperti jurusan atau status mahasiswa, dan \textit{feature engineering} untuk menciptakan fitur baru yang lebih informatif, misalnya rata-rata nilai mata kuliah inti. Selain itu, dataset akan dibagi menjadi set pelatihan dan pengujian untuk memfasilitasi evaluasi model prediksi lama studi yang akurat.
 
-\subsection{Deployment}
-Setelah model JST final dipilih dan divalidasi, tahap deployment akan fokus pada integrasi model ke dalam sistem informasi akademik yang ada di institusi. Ini melibatkan pengembangan antarmuka pengguna yang user-friendly untuk staf akademik, implementasi backend untuk menjalankan prediksi, dan penyiapan API untuk mengintegrasikan fungsionalitas prediksi dengan sistem yang ada. 
+\subsection{\textit{Modeling}}
+Dalam tahap pemodelan, implementasi metode Jaringan Syaraf Tiruan dengan algoritma \textit{backpropagation} untuk memprediksi lama studi mahasiswa akan dilakukan. Proses ini melibatkan eksperimen dengan berbagai arsitektur jaringan, penentuan jumlah \textit{layer} dan neuron yang optimal, serta \textit{tuning hyperparameter} seperti \textit{learning rate} dan momentum. Validasi silang akan digunakan untuk mengoptimalkan performa model. Fokus utama adalah pada pengembangan model JST yang dapat menangkap kompleksitas hubungan antara berbagai faktor akademik dan non-akademik yang mempengaruhi lama studi mahasiswa.
 
-\subsection{Feedback}
-Tahap akhir penelitian akan melibatkan pengumpulan dan analisis umpan balik dari pengguna sistem prediksi lama studi. Melalui survei pengguna, analisis akurasi prediksi terhadap hasil aktual, dan wawancara dengan stakeholder, peneliti akan mengidentifikasi area untuk perbaikan dan pengembangan lebih lanjut. Informasi ini akan digunakan untuk merumuskan rekomendasi untuk iterasi dan peningkatan sistem di masa depan, memastikan bahwa sistem prediksi lama studi menggunakan JST terus berkembang sesuai dengan dinamika akademik dan kebutuhan institusi pendidikan tinggi.
+\subsection{\textit{Evaluation}}
+Evaluasi model JST akan dilakukan secara komprehensif menggunakan berbagai metrik kinerja seperti \textit{Mean Absolute Error} (MAE), \textit{Root Mean Square Error} (RMSE), dan koefisien determinasi (R²) untuk mengukur akurasi prediksi lama studi. Selain itu, analisis sensitivitas akan dilakukan untuk memahami pengaruh relatif dari berbagai input terhadap prediksi. Proses evaluasi ini juga akan mencakup perbandingan dengan metode \textit{machine learning} lainnya seperti regresi linear dan \textit{decision tree} untuk mengukur keunggulan pendekatan JST dalam konteks prediksi lama studi mahasiswa.
+
+\subsection{\textit{Deployment}}
+Setelah model JST final dipilih dan divalidasi, tahap \textit{deployment} akan fokus pada integrasi model ke dalam sistem informasi akademik yang ada di institusi. Ini melibatkan pengembangan antarmuka pengguna yang \textit{user-friendly} untuk staf akademik, implementasi \textit{backend} untuk menjalankan prediksi, dan penyiapan API untuk mengintegrasikan fungsionalitas prediksi dengan sistem yang ada.
+
+\clearpage
 
 \section{Jadwal Penelitian}
 Jadwal dan waktu pelaksanaan penelitian ini dapat dilihat pada Tabel \ref{tab:jadwal-penelitian}. 
