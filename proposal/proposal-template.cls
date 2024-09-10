@@ -24,6 +24,7 @@
 \RequirePackage[indonesian]{babel}
 \RequirePackage{url}
 \RequirePackage{titlesec}
+\RequirePackage{pdflscape}
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
