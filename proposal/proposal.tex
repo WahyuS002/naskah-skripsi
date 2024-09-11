@@ -15,12 +15,12 @@ Berbagai pendekatan telah diusulkan dan diterapkan untuk memprediksi lama studi 
 
 Berdasarkan tinjauan dari beberapa penelitian yang telah dilakukan, berbagai pendekatan telah diusulkan untuk memprediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST), khususnya algoritma backpropagation. \cite{hossen2021web} mengembangkan model prediksi berbasis web dengan arsitektur empat tingkat menggunakan JST. Mereka menerapkan seleksi fitur untuk mengurangi jumlah variabel input dari 15 menjadi 4, yang menghasilkan peningkatan akurasi dan efisiensi komputasi. Model terbaik mereka mencapai akurasi 92\% menggunakan 4 fitur teratas. Sementara itu, \cite{sunardi2022pengaruh} melakukan analisis mendalam terhadap pengaruh jumlah hidden layer dan learning rate pada kecepatan pelatihan JST backpropagation. Mereka menemukan bahwa arsitektur dengan 12 neuron di hidden layer memberikan waktu pelatihan tercepat yaitu 3 menit 44 detik. Learning rate optimal yang mereka temukan adalah 0,5 dengan 100.000 iterasi. Pendekatan berbeda diambil oleh \cite{sari2021analisis} yang fokus pada prediksi mahasiswa dropout. Mereka membandingkan beberapa arsitektur JST dan menemukan bahwa model 12-5-2 (12 input, 5 hidden, 2 output) memberikan akurasi terbaik sebesar 98,2\% dengan learning rate 0,4 dan momentum 0,95. Ketiga studi tersebut menunjukkan bahwa optimalisasi parameter JST seperti arsitektur jaringan, jumlah neuron hidden layer, learning rate, dan momentum sangat penting untuk meningkatkan akurasi dan efisiensi model prediksi lama studi mahasiswa.
 
-Oleh karena itu, penelitian ini mengusulkan pengembangan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation. Sistem yang diusulkan akan mengintegrasikan data pembelajaran dari \textit{e-learning}, khususnya data pembelajaran mahasiswa TI & SI tahun 2022 yang relevan. Penelitian ini akan fokus pada optimalisasi arsitektur jaringan, penentuan jumlah neuron pada hidden layer yang optimal, serta pencarian nilai learning rate dan momentum yang tepat untuk meningkatkan akurasi prediksi. Selain itu, akan dilakukan perbandingan kinerja model JST dengan metode machine learning lainnya untuk memvalidasi efektivitas pendekatan yang diusulkan. Diharapkan hasil penelitian ini dapat memberikan alat prediksi yang akurat dan efisien bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa yang berisiko mengalami keterlambatan studi, sehingga intervensi dini dapat dilakukan untuk meningkatkan tingkat kelulusan tepat waktu.
+Oleh karena itu, penelitian ini mengusulkan pengembangan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation. Sistem yang diusulkan akan mengintegrasikan data pembelajaran dari \textit{e-learning}, khususnya data pembelajaran mahasiswa TI \& SI tahun 2022 yang relevan. Penelitian ini akan fokus pada optimalisasi arsitektur jaringan, penentuan jumlah neuron pada hidden layer yang optimal, serta pencarian nilai learning rate dan momentum yang tepat untuk meningkatkan akurasi prediksi. Selain itu, akan dilakukan perbandingan kinerja model JST dengan metode machine learning lainnya untuk memvalidasi efektivitas pendekatan yang diusulkan. Diharapkan hasil penelitian ini dapat memberikan alat prediksi yang akurat dan efisien bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa yang berisiko mengalami keterlambatan studi, sehingga intervensi dini dapat dilakukan untuk meningkatkan tingkat kelulusan tepat waktu.
 
 \section{Rumusan Masalah}
 Berdasarkan latar belakang yang telah diuraikan, rumusan masalah dalam penelitian ini adalah sebagai berikut:
     \begin{enumerate}
-        \item Bagaimana mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI & SI tahun 2022?
+        \item Bagaimana mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI \& SI tahun 2022?
         \item Bagaimana mengoptimalkan arsitektur jaringan, jumlah neuron pada hidden layer, nilai learning rate, dan momentum untuk meningkatkan akurasi prediksi lama studi mahasiswa menggunakan data e-learning?
         \item Bagaimana kinerja model JST yang dikembangkan dibandingkan dengan metode machine learning lainnya dalam memprediksi lama studi mahasiswa berdasarkan data e-learning?
     \end{enumerate}
@@ -29,7 +29,7 @@ Berdasarkan latar belakang yang telah diuraikan, rumusan masalah dalam penelitia
 Untuk memfokuskan penelitian ini, beberapa batasan masalah ditetapkan sebagai berikut:
     \begin{enumerate}
         \item Penelitian ini fokus pada penggunaan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation untuk memprediksi lama studi mahasiswa.
-        \item Data yang digunakan dalam penelitian ini terbatas pada data pembelajaran e-learning mahasiswa TI & SI tahun 2022.
+        \item Data yang digunakan dalam penelitian ini terbatas pada data pembelajaran e-learning mahasiswa TI \& SI tahun 2022.
         \item Optimalisasi model JST akan dilakukan pada parameter arsitektur jaringan, jumlah neuron hidden layer, learning rate, dan momentum menggunakan data e-learning.
         \item Perbandingan kinerja akan dilakukan antara model JST yang dikembangkan dengan beberapa metode machine learning lainnya yang umum digunakan untuk prediksi menggunakan data e-learning.
     \end{enumerate}
@@ -37,7 +37,7 @@ Untuk memfokuskan penelitian ini, beberapa batasan masalah ditetapkan sebagai be
 \section{Tujuan Penelitian}
 Tujuan dari penelitian ini adalah:
     \begin{enumerate}
-        \item Mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI & SI tahun 2022.
+        \item Mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI \& SI tahun 2022.
         \item Mengoptimalkan arsitektur jaringan, jumlah neuron pada hidden layer, nilai learning rate, dan momentum untuk meningkatkan akurasi prediksi lama studi mahasiswa menggunakan data e-learning.
         \item Membandingkan kinerja model JST yang dikembangkan dengan metode machine learning lainnya dalam memprediksi lama studi mahasiswa berdasarkan data e-learning.
     \end{enumerate}
@@ -82,7 +82,7 @@ Penelitian ini diharapkan dapat memberikan manfaat sebagai berikut:
 
     \item \textbf{Waktu dan Tempat Penelitian}
     
-    Penelitian ini dilaksanakan dalam rentang waktu empat bulan, dimulai dari Agustus 2024 hingga November 2024. Pengumpulan data dilakukan melalui akuisisi dataset dari Program Studi Sistem Informasi dan Informatika yang menyediakan basis data komprehensif mengenai data-data mahasiswa yang akan digunakan untuk membuat prediksi lama studi.
+    Penelitian ini dilaksanakan dalam rentang waktu empat bulan, dimulai dari Agustus 2024 hingga November 2024. Pengumpulan data dilakukan melalui akuisisi dataset dari Program Studi Sistem Informasi dan Informatika yang menyediakan basis data komprehensif mengenai data-data pembelajaran e-learning mahasiswa yang akan digunakan untuk membuat prediksi lama studi.
 
     \item \textbf{Sarana dan Pendukung}
     
@@ -110,11 +110,11 @@ Penelitian ini diharapkan dapat memberikan manfaat sebagai berikut:
     
     Rancangan penelitian ini disusun secara sistematis untuk memastikan pelaksanaan yang terstruktur dan efektif. Dengan mengadopsi metodologi \textit{Cross-Industry Standard Process for Data Mining} (CRISP-DM), penelitian ini dibagi menjadi beberapa tahapan kritis yang saling terkait. Setiap tahapan dirancang untuk membangun fondasi bagi tahapan berikutnya, memastikan kesinambungan dalam proses penelitian. Alur metode ini dapat dilihat pada Gambar \ref{fig:crisp-dm-overview}.
 
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
-        \fbox{\includegraphics[width=0.55\textwidth]{images/crisp-dm-overview.jpg}}
+        \includegraphics[width=0.5\textwidth]{images/crisp-dm-overview.jpg}
         \caption{Alur Metode CRISP-DM \cite{IBM2022}}
-        \label{fig:crisp-dm-overview}
+        \label{fig:crisp-dm-alur}
     \end{figure}
 
     Gambar \ref{fig:crisp-dm-overview} mengilustrasikan alur metode CRISP-DM yang diterapkan dalam pengembangan Sistem Prediksi Lama Studi Mahasiswa menggunakan Metode Jaringan Syaraf Tiruan. Berikut adalah penjelasan setiap tahap dalam konteks penelitian ini:
