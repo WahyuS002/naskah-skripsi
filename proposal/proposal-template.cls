@@ -27,6 +27,7 @@
 \RequirePackage{pdflscape}
 \RequirePackage{fontspec}
 \RequirePackage{unicode-math}
+\RequirePackage{tocloft}
 
 \setmainfont{Times New Roman}
 
@@ -35,6 +36,8 @@
     \fontsize{12pt}{14.4pt}\selectfont\bfseries\MakeUppercase{#1}
   \end{center}
 }
+
+
 
 % Define commands for document information
 \newcommand{\titleind}[1]{\def\@titleind{#1}}
@@ -61,15 +64,6 @@
 }
 
 %------------------------------------------------------------
-% Redefine section numbering
-%------------------------------------------------------------
-\titleformat{\section}
-  {\normalfont\normalsize\bfseries}{\thesection}{1em}{}
-\titlespacing*{\section}
-  {0pt}{3.5ex plus 1ex minus .2ex}{0.1ex plus .2ex}
-\renewcommand{\thesection}{\arabic{section}}
-
-%------------------------------------------------------------
 % Redefine caption names
 %------------------------------------------------------------
 \renewcommand{\chaptername}{BAB}
@@ -80,12 +74,12 @@
 \renewcommand{\@makechapterhead}[1]{%
   {\parindent \z@ \centering \normalfont
   \ifnum \c@secnumdepth >\m@ne
-  \normalsize\bfseries \@chapapp\space \thechapter
+  \normalsize\bfseries \MakeUppercase{\@chapapp\space \thechapter}
   \par\nobreak
   \vskip -5\p@
   \fi
   \interlinepenalty\@M
-  \normalsize \bfseries #1\par\nobreak
+  \normalsize \bfseries \MakeUppercase{#1}\par\nobreak
   \vskip 10\p@
 }}
 
@@ -115,6 +109,7 @@
 
 \setlength{\parindent}{3em} % Set indentation
 \setlength{\parskip}{1em} % Space between paragraph
+\renewcommand{\baselinestretch}{1.5} % Set default line spacing to 1.5
 
 %------------------------------------------------------------
 % Define cover in Indonesian
@@ -158,10 +153,57 @@
   \clearpage
 }
 
+% Define command for frontmatter page numbering using lowercase roman numerals (i, ii, iii, ...)
+\newcommand{\frontmatter}{%
+  \clearpage
+  \pagenumbering{roman}
+  \setcounter{page}{1}
+}
+
+% Define command for mainmatter page numbering using arabic numerals (1, 2, 3, ...) 
+\newcommand{\mainmatter}{%
+  \clearpage
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+}
+
+% Adjust spacing and formatting for all lists
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1em}
+\renewcommand{\cftdot}{.}
+\renewcommand{\cftdotsep}{0.5}
+
+% Format chapter entries in TOC
+\renewcommand{\cftchappresnum}{BAB }
+\renewcommand{\cftchapaftersnum}{\space}
+\setlength{\cftchapnumwidth}{4em}
+
+% Adjust indent for section and subsection
+\setlength{\cftsecindent}{4em}
+\setlength{\cftsubsecindent}{7em}
+
+% Format titles for TOC, LOT, and LOF
+\renewcommand{\cfttoctitlefont}{\hfil\Large\bfseries}
+\renewcommand{\cftlottitlefont}{\hfil\Large\bfseries}
+\renewcommand{\cftloftitlefont}{\hfil\Large\bfseries}
+
+% Remove 'Tabel' and 'Gambar' from entries in LOT and LOF
+\renewcommand{\cfttabpresnum}{}
+\renewcommand{\cftfigpresnum}{}
+\setlength{\cfttabnumwidth}{2em}
+\setlength{\cftfignumwidth}{2em}
+
+\newcommand{\formattedSectionTitle}[1]{
+  \begin{center}
+    \fontsize{12pt}{14.4pt}\selectfont\bfseries\MakeUppercase{#1}
+  \end{center}
+}
+
 %------------------------------------------------------------
 % Table of Contents
 %------------------------------------------------------------
 \newcommand{\tableOfContents}{%
+  \phantomsection
   \renewcommand{\contentsname}{}
   \begingroup
   \let\clearpage\relax
@@ -172,15 +214,19 @@
   \clearpage
 }
 
+
 %------------------------------------------------------------
 % List of Tables
 %------------------------------------------------------------
 \newcommand{\listOfTables}{%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{DAFTAR TABEL}
   \renewcommand{\listtablename}{}
   \begingroup
   \let\clearpage\relax
   \let\cleardoublepage\relax
   \formattedSectionTitle{DAFTAR TABEL}
+  \vspace{-6em}  % Reduce space after title
   \listoftables
   \endgroup
   \clearpage
@@ -190,11 +236,14 @@
 % List of Figures
 %------------------------------------------------------------
 \newcommand{\listOfFigures}{%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
   \renewcommand{\listfigurename}{}
   \begingroup
   \let\clearpage\relax
   \let\cleardoublepage\relax
-  \formattedSectionTitle{Daftar Gambar}
+  \formattedSectionTitle{DAFTAR GAMBAR}
+  \vspace{-6em}  % Reduce space after title
   \listoffigures
   \endgroup
   \clearpage
@@ -211,13 +260,11 @@
     \MakeUppercase{\normalfont\bfseries INTISARI}
   \end{center}
   \vspace{1em}
-  \begin{singlespace}
-    \noindent\hspace{\parindent}Penelitian ini bertujuan untuk mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma \textit{backpropagation}. Latar belakang penelitian ini adalah pentingnya ketepatan waktu kelulusan mahasiswa sebagai indikator kualitas pendidikan tinggi, serta dampak negatif dari keterlambatan kelulusan. Sistem prediksi yang diusulkan akan mengintegrasikan dari data \textit{e-learning} mahasiswa untuk memprediksi lama studi. Fokus utama penelitian adalah pada optimalisasi arsitektur jaringan JST, penentuan jumlah neuron pada \textit{hidden layer}, serta pencarian nilai \textit{learning rate} dan momentum yang optimal untuk meningkatkan akurasi prediksi. Metodologi penelitian mengadopsi pendekatan CRISP-DM, meliputi tahap pemahaman bisnis, pemahaman data, persiapan data, pemodelan, evaluasi, dan deployment. Hasil penelitian diharapkan dapat memberikan alat prediksi yang akurat bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa berisiko mengalami keterlambatan studi, sehingga intervensi dini dapat dilakukan untuk meningkatkan tingkat kelulusan tepat waktu.
+  \noindent\hspace{\parindent}Penelitian ini bertujuan untuk mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma \textit{backpropagation}. Latar belakang penelitian ini adalah pentingnya ketepatan waktu kelulusan mahasiswa sebagai indikator kualitas pendidikan tinggi, serta dampak negatif dari keterlambatan kelulusan. Sistem prediksi yang diusulkan akan mengintegrasikan dari data \textit{e-learning} mahasiswa untuk memprediksi lama studi. Fokus utama penelitian adalah pada optimalisasi arsitektur jaringan JST, penentuan jumlah neuron pada \textit{hidden layer}, serta pencarian nilai \textit{learning rate} dan momentum yang optimal untuk meningkatkan akurasi prediksi. Metodologi penelitian mengadopsi pendekatan CRISP-DM, meliputi tahap pemahaman bisnis, pemahaman data, persiapan data, pemodelan, evaluasi, dan deployment. Hasil penelitian diharapkan dapat memberikan alat prediksi yang akurat bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa berisiko mengalami keterlambatan studi, sehingga intervensi dini dapat dilakukan untuk meningkatkan tingkat kelulusan tepat waktu.
 
-    \vspace{1em}
-    \noindent
-    \textbf{Kata kunci:} Prediksi lama studi, Jaringan Syaraf Tiruan, \textit{E-learning}, \textit{Backpropagation}, \textit{Machine Learning}, Pendidikan tinggi, CRISP-DM
-  \end{singlespace}
+  \vspace{1em}
+  \noindent
+  \textbf{Kata kunci:} Prediksi lama studi, Jaringan Syaraf Tiruan, \textit{E-learning}, \textit{Backpropagation}, \textit{Machine Learning}, Pendidikan tinggi, CRISP-DM
 }
 
 %------------------------------------------------------------
@@ -231,13 +278,11 @@
     \MakeUppercase{\normalfont\bfseries ABSTRACT}
   \end{center}
   \vspace{1em}
-  \begin{singlespace}
-    \noindent\hspace{\parindent}\textit{This research aims to develop a student study duration prediction system using Artificial Neural Network (ANN) method with backpropagation algorithm. The background of this study is the importance of timely graduation as an indicator of higher education quality, and the negative impacts of delayed graduation. The proposed prediction system will integrate students' academic data to predict study duration. The main focus of the research is on optimizing the ANN network architecture, determining the optimal number of neurons in the hidden layer, and finding the appropriate learning rate and momentum values to improve prediction accuracy. The research methodology adopts the CRISP-DM approach, including the stages of business understanding, data understanding, data preparation, modeling, evaluation, and deployment. The research results are expected to provide an accurate prediction tool for higher education institutions to identify students at risk of experiencing study delays, so that early interventions can be carried out to improve on-time graduation rates.}
+  \noindent\hspace{\parindent}\textit{This research aims to develop a student study duration prediction system using Artificial Neural Network (ANN) method with backpropagation algorithm. The background of this study is the importance of timely graduation as an indicator of higher education quality, and the negative impacts of delayed graduation. The proposed prediction system will integrate students' academic data to predict study duration. The main focus of the research is on optimizing the ANN network architecture, determining the optimal number of neurons in the hidden layer, and finding the appropriate learning rate and momentum values to improve prediction accuracy. The research methodology adopts the CRISP-DM approach, including the stages of business understanding, data understanding, data preparation, modeling, evaluation, and deployment. The research results are expected to provide an accurate prediction tool for higher education institutions to identify students at risk of experiencing study delays, so that early interventions can be carried out to improve on-time graduation rates.}
 
-    \vspace{1em}
-    \noindent
-    \textit{\textbf{Keywords:} Study duration prediction, Artificial Neural Network, E-learning, Backpropagation, Machine Learning, Higher education, CRISP-DM}
-  \end{singlespace}
+  \vspace{1em}
+  \noindent
+  \textit{\textbf{Keywords:} Study duration prediction, Artificial Neural Network, E-learning, Backpropagation, Machine Learning, Higher education, CRISP-DM}
 }
 
 \startpagenumbering  % Start numbering from 1 in Arabic

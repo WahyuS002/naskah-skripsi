@@ -14,13 +14,17 @@
     \begin{sloppypar}
         \cover
         \emptyApprovalPage
+        \frontmatter  % Start Roman numeral page numbering
         \tableOfContents
         \listOfTables
         \listOfFigures
         \intisari
         \englishabstract
 
-        \include{proposal}
+        \mainmatter  % Switch back to Arabic numerals
+        \include{bab1}
+        \include{bab2}
+        \include{bab3}
 
         \bibliography{daftar-pustaka}
         \bibliographystyle{apacite}

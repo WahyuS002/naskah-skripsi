@@ -1,0 +1,67 @@
+\chapter{PENDAHULUAN}
+
+\section{Latar Belakang Masalah}
+Lama studi mahasiswa merupakan salah satu indikator penting yang mencerminkan kualitas dan efektivitas pendidikan di perguruan tinggi. Durasi penyelesaian studi tidak hanya berdampak pada mahasiswa secara individual, tetapi juga memiliki implikasi signifikan bagi institusi pendidikan tinggi secara keseluruhan. Semakin cepat dan tepat waktu mahasiswa menyelesaikan studinya, semakin baik pula kinerja institusi dalam menjalankan fungsi pendidikannya. Hal ini sejalan dengan temuan \cite{so2020developing} yang menyatakan bahwa ketepatan waktu kelulusan mahasiswa merupakan perhatian utama bagi penyelenggara pendidikan tinggi, terutama bagian urusan kemahasiswaan, dalam merancang kegiatan pengembangan yang bermakna dan diterima dengan baik oleh mahasiswa. Lebih lanjut, \cite{chen2019analysis} menggarisbawahi pentingnya analisis durasi studi mahasiswa bagi institusi pendidikan tinggi untuk mengidentifikasi faktor-faktor yang mempengaruhi lama studi dan mengembangkan strategi untuk meningkatkan tingkat kelulusan tepat waktu. Kedua penelitian ini menekankan bahwa pemahaman tentang faktor-faktor yang mempengaruhi lama studi mahasiswa dapat membantu institusi pendidikan tinggi dalam mengembangkan strategi yang efektif untuk meningkatkan tingkat kelulusan tepat waktu dan mengurangi angka putus kuliah.
+
+Pentingnya ketepatan waktu kelulusan telah dipahami dengan baik, realitas di lapangan menunjukkan bahwa masih banyak mahasiswa yang tidak dapat menyelesaikan studi mereka sesuai dengan waktu yang ditentukan. Fenomena ini menjadi permasalahan serius yang perlu ditangani oleh institusi pendidikan tinggi. Keterlambatan kelulusan tidak hanya berdampak pada efisiensi sistem pendidikan, tetapi juga memiliki konsekuensi ekonomi dan sosial yang signifikan bagi mahasiswa dan masyarakat secara luas. Menurut \cite{putri2018analysis}, tingkat kelulusan tepat waktu di beberapa perguruan tinggi masih berada di bawah 50\%, yang menunjukkan adanya gap yang besar antara harapan dan kenyataan. Lebih lanjut, \cite{wang2018design} mengidentifikasi bahwa keterlambatan kelulusan sering kali disebabkan oleh berbagai faktor kompleks, termasuk permasalahan akademik, finansial, dan psikososial yang dihadapi mahasiswa selama masa studi mereka. Oleh karena itu, identifikasi dini terhadap mahasiswa yang berisiko mengalami keterlambatan kelulusan menjadi sangat penting untuk memungkinkan intervensi yang tepat waktu dan efektif.
+
+Masalah keterlambatan kelulusan mahasiswa dapat diatasi dengan mengembangkan dan menerapkan sistem bimbingan akademik sebagai solusi konvensional. Sistem bimbingan akademik ini bertujuan untuk membantu mahasiswa mengatasi tantangan akademik dan pribadi, serta mengarahkan mereka menuju jalur pendidikan tinggi yang telah mereka pilih. Seperti yang dikemukakan oleh \cite{elcullada2018academic}, bimbingan akademik dianggap sebagai bagian penting dari keberhasilan akademik mahasiswa. Namun, sistem bimbingan konvensional seringkali menghadapi berbagai kendala, seperti beban kerja dosen pembimbing yang tinggi, waktu pertemuan yang terbatas, dan kurangnya pemahaman menyeluruh tentang latar belakang mahasiswa. Hal ini dapat mengakibatkan kualitas bimbingan yang kurang optimal dan mahasiswa membuat pilihan akademik yang kurang tepat. 
+
+Berbagai pendekatan telah diusulkan dan diterapkan untuk memprediksi lama studi mahasiswa dalam beberapa tahun terakhir. \cite{alyahyan2020decision} mengembangkan model prediksi menggunakan algoritma pohon keputusan, khususnya J48, Random Tree, dan REPTree. Mereka memanfaatkan data akademik mahasiswa seperti nilai mata kuliah dan IPK tahun pertama untuk memprediksi prestasi akademik mahasiswa di akhir masa studi. Model terbaik yang dihasilkan mampu mencapai akurasi hingga 69,3\%. Sementara itu, \cite{danbatta2020predicting} menerapkan beberapa teknik regresi seperti regresi linear, eksponensial, logaritmik, polinomial dan power untuk memprediksi IPK akhir mahasiswa berdasarkan IPK tahun pertama. Mereka menemukan bahwa regresi linear memberikan hasil terbaik dengan tingkat akurasi yang cukup tinggi. Pendekatan berbeda diambil oleh \cite{olalekan2020performance} yang membandingkan kinerja Naive Bayes dan Jaringan Syaraf Tiruan (JST) dalam memprediksi kelulusan mahasiswa. Hasil penelitian mereka menunjukkan bahwa JST mampu menghasilkan akurasi yang lebih tinggi, mencapai 79,31\% untuk satu lapisan tersembunyi dan meningkat hingga 99,97\% untuk empat lapisan tersembunyi.
+
+Berdasarkan tinjauan dari beberapa penelitian yang telah dilakukan, berbagai pendekatan telah diusulkan untuk memprediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST), khususnya algoritma backpropagation. \cite{hossen2021web} mengembangkan model prediksi berbasis web dengan arsitektur empat tingkat menggunakan JST. Mereka menerapkan seleksi fitur untuk mengurangi jumlah variabel input dari 15 menjadi 4, yang menghasilkan peningkatan akurasi dan efisiensi komputasi. Model terbaik mereka mencapai akurasi 92\% menggunakan 4 fitur teratas. Sementara itu, \cite{sunardi2022pengaruh} melakukan analisis mendalam terhadap pengaruh jumlah hidden layer dan learning rate pada kecepatan pelatihan JST backpropagation. Mereka menemukan bahwa arsitektur dengan 12 neuron di hidden layer memberikan waktu pelatihan tercepat yaitu 3 menit 44 detik. Learning rate optimal yang mereka temukan adalah 0,5 dengan 100.000 iterasi. Pendekatan berbeda diambil oleh \cite{sari2021analisis} yang fokus pada prediksi mahasiswa dropout. Mereka membandingkan beberapa arsitektur JST dan menemukan bahwa model 12-5-2 (12 input, 5 hidden, 2 output) memberikan akurasi terbaik sebesar 98,2\% dengan learning rate 0,4 dan momentum 0,95. Ketiga studi tersebut menunjukkan bahwa optimalisasi parameter JST seperti arsitektur jaringan, jumlah neuron hidden layer, learning rate, dan momentum sangat penting untuk meningkatkan akurasi dan efisiensi model prediksi lama studi mahasiswa.
+
+Oleh karena itu, penelitian ini mengusulkan pengembangan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation. Sistem yang diusulkan akan mengintegrasikan data pembelajaran dari \textit{e-learning}, khususnya data pembelajaran mahasiswa TI \& SI tahun 2022 yang relevan. Penelitian ini akan fokus pada optimalisasi arsitektur jaringan, penentuan jumlah neuron pada hidden layer yang optimal, serta pencarian nilai learning rate dan momentum yang tepat untuk meningkatkan akurasi prediksi. Selain itu, akan dilakukan perbandingan kinerja model JST dengan metode machine learning lainnya untuk memvalidasi efektivitas pendekatan yang diusulkan. Diharapkan hasil penelitian ini dapat memberikan alat prediksi yang akurat dan efisien bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa yang berisiko mengalami keterlambatan studi, sehingga intervensi dini dapat dilakukan untuk meningkatkan tingkat kelulusan tepat waktu.
+
+\section{Rumusan Masalah}
+Berdasarkan latar belakang yang telah diuraikan, rumusan masalah dalam penelitian ini adalah sebagai berikut:
+    \begin{enumerate}
+        \item Bagaimana mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI \& SI tahun 2022?
+        \item Bagaimana mengoptimalkan arsitektur jaringan, jumlah neuron pada hidden layer, nilai learning rate, dan momentum untuk meningkatkan akurasi prediksi lama studi mahasiswa menggunakan data e-learning?
+        \item Bagaimana kinerja model JST yang dikembangkan dibandingkan dengan metode machine learning lainnya dalam memprediksi lama studi mahasiswa berdasarkan data e-learning?
+    \end{enumerate}
+
+\section{Batasan Masalah}
+Untuk memfokuskan penelitian ini, beberapa batasan masalah ditetapkan sebagai berikut:
+    \begin{enumerate}
+        \item Penelitian ini fokus pada penggunaan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation untuk memprediksi lama studi mahasiswa.
+        \item Data yang digunakan dalam penelitian ini terbatas pada data pembelajaran e-learning mahasiswa TI \& SI tahun 2022.
+        \item Optimalisasi model JST akan dilakukan pada parameter arsitektur jaringan, jumlah neuron hidden layer, learning rate, dan momentum menggunakan data e-learning.
+        \item Perbandingan kinerja akan dilakukan antara model JST yang dikembangkan dengan beberapa metode machine learning lainnya yang umum digunakan untuk prediksi menggunakan data e-learning.
+    \end{enumerate}
+
+\section{Tujuan Penelitian}
+Tujuan dari penelitian ini adalah:
+    \begin{enumerate}
+        \item Mengembangkan sistem prediksi lama studi mahasiswa menggunakan metode Jaringan Syaraf Tiruan (JST) dengan algoritma backpropagation berdasarkan data pembelajaran e-learning mahasiswa TI \& SI tahun 2022.
+        \item Mengoptimalkan arsitektur jaringan, jumlah neuron pada hidden layer, nilai learning rate, dan momentum untuk meningkatkan akurasi prediksi lama studi mahasiswa menggunakan data e-learning.
+        \item Membandingkan kinerja model JST yang dikembangkan dengan metode machine learning lainnya dalam memprediksi lama studi mahasiswa berdasarkan data e-learning.
+    \end{enumerate}
+
+\section{Manfaat Penelitian}
+Penelitian ini diharapkan dapat memberikan manfaat sebagai berikut:
+
+    \begin{enumerate}
+        \item Memberikan kontribusi dalam pengembangan sistem prediksi lama studi mahasiswa berbasis data e-learning yang dapat diimplementasikan di institusi pendidikan tinggi.
+        \item Meningkatkan pemahaman tentang faktor-faktor dalam pembelajaran e-learning yang mempengaruhi lama studi mahasiswa dan bagaimana memprediksinya menggunakan metode Jaringan Syaraf Tiruan.
+        \item Menyediakan alat bantu bagi institusi pendidikan tinggi untuk mengidentifikasi mahasiswa yang berisiko mengalami keterlambatan studi berdasarkan performa e-learning mereka, sehingga dapat dilakukan intervensi dini.
+        \item Berkontribusi pada peningkatan efisiensi dan efektivitas sistem pendidikan tinggi melalui prediksi lama studi yang lebih akurat berdasarkan data e-learning.
+        \item Memperkaya literatur ilmiah tentang aplikasi metode Jaringan Syaraf Tiruan dalam analisis data e-learning, khususnya untuk prediksi lama studi mahasiswa.
+        \item Memberikan landasan untuk penelitian lebih lanjut dalam pengembangan sistem prediksi dan analisis data e-learning menggunakan metode machine learning.
+    \end{enumerate}
+
+\section{Sistematika Penelitian}
+
+Sistematika penelitian proposal skripsi terbagi menjadi 3 (tiga) bab yang diuraikan sebagai berikut:
+
+\textbf{BAB I PENDAHULUAN}
+
+Bagian ini bertujuan untuk memberikan gambaran umum tentang latar belakang masalah, tujuan, dan manfaat penelitian. Rumusan masalah harus jelas dan spesifik agar arah penelitian menjadi fokus dan terarah.
+
+\textbf{BAB II TINJAUAN PUSTAKA}
+
+Tinjauan pustaka menyediakan dasar teori dan penelitian terdahulu yang relevan dengan topik. Landasan teori harus menjelaskan konsep-konsep kunci yang digunakan dalam penelitian, sementara kerangka konseptual membantu visualisasi hubungan antarvariabel.
+
+\textbf{BAB III METODE PENELITIAN}
+
+Metodologi penelitian menggambarkan cara penelitian akan dilakukan. Penjelasan tentang jenis penelitian, subjek dan objek, teknik pengumpulan data, instrumen, dan analisis data harus detail agar penelitian dapat direplikasi.
